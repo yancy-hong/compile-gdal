@@ -62,6 +62,11 @@ apt install -y netplan git libtiff-dev libcrypto++-dev m4 flex \
 libpcre2-dev libreadline-dev
 # 在卸载旧的proj或sqlite时，可能会连同netplan也卸载，如果被卸载了，重新安装即可。
 # 此外，目前我只发现了netplan被卸载了，其他尚未可知，如果其他命令被卸载了，重新安装即可。
+# When uninstalling old versions of proj or sqlite, it's possible that netplan
+# might also be uninstalled along with them. If netplan is uninstalled, simply reinstall it.
+# Furthermore, at present, I have only noticed that netplan has been uninstalled.
+# As for other potential uninstallations, if any other commands or packages are found to be missing,
+# simply reinstall them as well.
 
 sudo apt install -y gcc-10 g++-10 &&
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 100 &&
