@@ -2,9 +2,9 @@
 
 set -e
 
-echo "export JAVA_HOME=/gdal391_compiler/soft/java-se-8u41-ri" >> ~/.bashrc &&
-echo "export ANT_HOME=/gdal391_compiler/soft/apache-ant-1.10.14" >> ~/.bashrc &&
-echo "export PATH=$JAVA_HOME/bin:$PATH" >> ~/.bashrc &&
+echo "export JAVA_HOME=/gdal391_compiler/soft/java-se-8u41-ri" >> ~/.bashrc && source ~/.bashrc &&
+echo "export ANT_HOME=/gdal391_compiler/soft/apache-ant-1.10.14" >> ~/.bashrc && source ~/.bashrc &&
+echo "export PATH=$ANT_HOME/bin:$JAVA_HOME/bin:$PATH" >> ~/.bashrc && source ~/.bashrc &&
 echo "export LD_LIBRARY_PATH=/usr/local/pgsql/lib/:/usr/lib:/usr/local/lib:/usr/local/lib64:$LD_LIBRARY_PATH" >> ~/.bashrc &&
 source ~/.bashrc
 
