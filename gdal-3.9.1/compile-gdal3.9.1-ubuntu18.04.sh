@@ -2,6 +2,12 @@
 
 set -e
 
+echo "export JAVA_HOME=/gdal391_compiler/soft/java-se-8u41-ri" >> ~/.bashrc &&
+echo "export ANT_HOME=/gdal391_compiler/soft/apache-ant-1.10.14" >> ~/.bashrc &&
+echo "export PATH=$JAVA_HOME/bin:$PATH" >> ~/.bashrc &&
+echo "export LD_LIBRARY_PATH=/usr/local/pgsql/lib/:/usr/lib:/usr/local/lib:/usr/local/lib64:$LD_LIBRARY_PATH" >> ~/.bashrc &&
+source ~/.bashrc
+
 sudo add-apt-repository -y ppa:ubuntugis/ppa &&
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test &&
 sudo add-apt-repository -y ppa:git-core/ppa &&
@@ -79,16 +85,14 @@ wget https://github.com/OSGeo/gdal/releases/download/v3.9.1/gdal-3.9.1.tar.gz &&
 wget https://ftp.gnu.org/gnu/bison/bison-3.8.2.tar.gz && 
 wget https://ftp.postgresql.org/pub/source/v16.3/postgresql-16.3.tar.gz &&
 wget https://download.java.net/openjdk/jdk8u41/ri/openjdk-8u41-b04-linux-x64-14_jan_2020.tar.gz &&
+wget https://downloads.apache.org/ant/binaries/apache-ant-1.10.14-bin.tar.gz &&
 mv swig-4.2.1.tar.gz\?viasf\=1 swig-4.2.1.tar.gz && tar -zxvf cmake-3.30.1.tar.gz -C ../soft/ &&
 tar -zxvf FileGDB_API-RHEL7-64gcc83.tar.gz -C ../soft/ && tar -zxvf gdal-3.9.1.tar.gz -C ../soft/ &&
 tar -zxvf proj-9.4.1.tar.gz -C ../soft/ && tar -zxvf sqlite-autoconf-3460000.tar.gz -C ../soft/ &&
 tar -zxvf swig-4.2.1.tar.gz -C ../soft/ && tar -zxvf bison-3.8.2.tar.gz -C ../soft/ &&
 tar -zxvf postgresql-16.3.tar.gz -C ../soft/ &&
 tar -zxvf openjdk-8u41-b04-linux-x64-14_jan_2020.tar.gz -C ../soft/ &&
-echo "export JAVA_HOME=/gdal391_compiler/soft/java-se-8u41-ri" >> ~/.bashrc && source ~/.bashrc &&
-echo "export PATH=$JAVA_HOME/bin:$PATH" >> ~/.bashrc && source ~/.bashrc &&
-echo "export LD_LIBRARY_PATH=/usr/local/pgsql/lib/:/usr/lib:/usr/local/lib:/usr/local/lib64:$LD_LIBRARY_PATH" >> ~/.bashrc && source ~/.bashrc &&
-apt install -y ant && apt remove -y openjdk-11-jre-headless && apt autoremove -y
+tar -zxvf apache-ant-1.10.14-bin.tar.gz -C ../soft/
 
 cd /gdal391_compiler/soft/cmake-3.30.1/ && ./configure && make -j16 && make install
 cd /gdal391_compiler/soft/sqlite-autoconf-3460000 && ./configure && make -j16 && make install
