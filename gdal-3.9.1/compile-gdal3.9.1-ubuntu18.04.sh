@@ -110,3 +110,6 @@ cmake -DFileGDB_INCLUDE_DIR=/usr/include/ -DPostgreSQL_LIBRARY=/usr/local/pgsql/
 -DPostgreSQL_INCLUDE_DIR=/usr/local/pgsql/include/ -DCMAKE_BUILD_TYPE=Release \
 -DJSON-C_INCLUDE_DIR=/usr/local/json-c-0.15/include \
 -DJSON-C_LIBRARY=/usr/local/json-c-0.15/lib/libjson-c.so .. && cmake --build . && cmake --build . --target install
+
+gdalinfo --formats
+gdalinfo --version
