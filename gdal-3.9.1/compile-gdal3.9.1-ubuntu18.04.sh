@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# Ubuntu    18.04-LTS
+# CMake     3.30.1
+# gcc       10.3.0
+# PROJ      9.4.1
+# SQLite    3.46.0
+# SWIG      4.2.1
+# Java      1.8
+# FileGDB   1.5.2
+# GDAL      3.9.1
+
 set -e
 
 echo "export JAVA_HOME=/gdal391_compiler/soft/java-se-8u41-ri" >> ~/.bashrc && source ~/.bashrc &&
