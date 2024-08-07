@@ -17,7 +17,7 @@ cd compile-gdal/gdal-3.9.1
 chmod -rwx compile-gdal3.9.1-ubuntu18.04.sh
 ```
 
-> Execute the script in two ways (since it involves environment variables in `~/.bashrc`, avoid using bash or `./` directly):
+> Execute the script in two ways (since it involves environment variables in `~/.bashrc`, avoid using `bash` or `./` directly):
 ```shell
 . compile-gdal3.9.1-ubuntu18.04.sh # Notice the dot . before the script name  
 # or  
