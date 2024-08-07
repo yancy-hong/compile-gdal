@@ -6,9 +6,8 @@
 
 > Download the script:
 ```shell
-wget https://github.com/yancy-hong/compile-gdal/tree/master/gdal-3.9.1/compile-gdal3.9.1-ubuntu18.04.sh
-# or
 git clone https://github.com/yancy-hong/compile-gdal.git
+cd compile-gdal/
 cd gdal-3.9.1
 ```
 
