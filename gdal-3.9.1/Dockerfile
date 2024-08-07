@@ -4,7 +4,7 @@ LABEL maintainer="yancy hong <2530304058@qq.com>"
 
 RUN apt update && apt upgrade -y && apt install -y software-properties-common
 
-ENV JAVA_HOME /gdal391_compiler/soft/java-se-8u41-ri
+ENV JAVA_HOME /opt/java-se-8u41-ri
 ENV ANT_HOME /gdal391_compiler/soft/apache-ant-1.10.14
 ENV PATH $ANT_HOME/bin:$JAVA_HOME/bin:$PATH
 ENV LD_LIBRARY_PATH /usr/local/pgsql/lib/:/usr/lib:/usr/local/lib:/usr/local/lib64:$LD_LIBRARY_PATH
@@ -89,7 +89,7 @@ RUN cd /gdal391_compiler/packages && \
 	tar -zxvf proj-9.4.1.tar.gz -C ../soft/ && tar -zxvf sqlite-autoconf-3460000.tar.gz -C ../soft/ && \
 	tar -zxvf swig-4.2.1.tar.gz -C ../soft/ && tar -zxvf bison-3.8.2.tar.gz -C ../soft/ && \
 	tar -zxvf postgresql-16.3.tar.gz -C ../soft/ && \
-	tar -zxvf openjdk-8u41-b04-linux-x64-14_jan_2020.tar.gz -C ../soft/ && \
+	tar -zxvf openjdk-8u41-b04-linux-x64-14_jan_2020.tar.gz -C /opt && \
 	tar -zxvf apache-ant-1.10.14-bin.tar.gz -C ../soft/
 
 RUN cd /gdal391_compiler/soft/cmake-3.30.1/ && ./configure && make -j16 && make install
