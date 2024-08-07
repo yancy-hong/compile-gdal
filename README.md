@@ -24,5 +24,5 @@ chmod -rwx compile-gdal3.9.1-ubuntu18.04.sh
 source compile-gdal3.9.1-ubuntu18.04.sh
 ```
 
-### Tutorial(Only Chinese)
+### Tutorial(Chinese only)
 > [CSDN link](https://blog.csdn.net/m0_53928179/article/details/140827578?spm=1001.2014.3001.5502)
