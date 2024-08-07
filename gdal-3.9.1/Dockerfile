@@ -128,5 +128,5 @@ RUN cd /gdal391_compiler/soft/gdal-3.9.1 && mkdir build && cd build && \
 	-DJSON-C_INCLUDE_DIR=/usr/local/json-c-0.15/include \
 	-DJSON-C_LIBRARY=/usr/local/json-c-0.15/lib/libjson-c.so .. && \
 	cmake --build . && cmake --build . --target install && \
-	cp swig/java/libgdalalljni.so /usr/lib && rm -rf /gdal391_compiler/packages && \
+	cp swig/java/libgdalalljni.so /usr/lib && rm -rf /gdal391_compiler && \
 	gdalinfo --formats && gdalinfo --version
