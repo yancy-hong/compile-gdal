@@ -2,6 +2,8 @@
 
 > This is a script for compiling and installing `GDAL` on `Ubuntu` (with potential support for other Linux distributions in the future), supporting most drivers.
 
+> The compilation process takes approximately fifteen to forty minutes depending on computer performance and network speed
+
 ### Usage
 
 > Download the script:
