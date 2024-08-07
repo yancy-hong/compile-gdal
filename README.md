@@ -8,9 +8,8 @@
 
 > Download the script:
 ```shell
-git clone https://github.com/yancy-hong/compile-gdal.git
-cd compile-gdal/
-cd gdal-3.9.1
+git clone https://github.com/yancy-hong/compile-gdal.git &&
+cd compile-gdal/gdal-3.9.1
 ```
 
 > Give script permissions:
